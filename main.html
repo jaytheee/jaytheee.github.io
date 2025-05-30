@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jayden's hut</title>
+    <link rel="icon" href="f05.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="actuallycollumn" style="color: #FAE1DF;">
+        <div class="column" style="margin-bottom: 15px; gap: 25px;">
+            <h1>jayden's hut</h1>
+            <i class="bi bi-house-door-fill" style="font-size: 32px;"></i>
+        </div>
+
+        <div style="color: white;" class="social-media-row" id="click">
+            <!-- <a href="https://google.com" target="_blank" onclick="playClick()" class="social-media-icon" >
+                <i class="bi bi-instagram"></i>
+            </a> -->
+            <a target="_blank" onclick="playClick(); alertBrowser()" class="social-media-icon">
+                <i class="bi bi-discord"></i>
+            </a>
+            <a href="mailto:heyjaythe@gmail.com" target="_blank" onclick="playClick()" class="social-media-icon">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="actuallycollumn">
+        <div>
+            <img class="image1" src="f05.png">
+        </div>
+        <div>
+            <h2>about me</h2>
+            <p>hi there!
+                <br> <br> im <span class="accent">jayden</span> (or jaythe) and i enjoy doing a variety of things such
+                as guitar, music production, singing, coding, video editing, occasional gaming and studying!
+                <br> <br> i’m mainly experienced in web development. if you’d like to see some projects i made in the
+                past, check it out here.
+            </p>
+            <a href="#projects">
+                <button onclick="playClick()">cool!</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="actuallycollumn" id="projects">
+        <h2>
+            projects of mine
+        </h2>
+        <p>
+            i've worked on some projects in the past and thought it would be cool to put them on here if anyone's
+            interested.
+            <br>
+            while these websites may seem a lot more impressive than the page you are currently on, that's because i had
+            access to website builders. with this one, i thought it would be a nice challenge to try code it the hard
+            way.
+        </p>
+        <div class="link-text actuallycollumn" style="margin-bottom: 0;">
+            <a href="https://kinkylizard.com.au" target="_blank">kinky lizard - 2024 (former)</a>
+            <a href="https://sugarland.id" target="_blank">sugarland homemade bakery - 2024</a>
+        </div>
+    </div>
+
+    <div class="actuallycollumn">
+        <h2>favourite album <br>
+            (of 2025)</h2>
+        <img class="image1" src="i felt like a sketch.jpg" style="margin-top: 10px;" alt="i felt like a sketch">
+        <h3 style="margin-bottom: 10px;">i felt like a sketch</h3>
+        <p style="margin-top: 0;">by key vs. locket</p>
+        <p style="margin-top: 0;">
+            key vs. locket is a massive inspiration to me and i’m glad to say that their new debut album is my
+            favorite
+            this year so far. with amazing tracks, particularly ‘snowman, snowman’ and ‘nothing for a moment’, i
+            felt
+            like this album deserved to be number one for me this year.
+            <br><br>
+            it has definitely been enjoyable to listen to during commutes and i recommend a lot of people to listen
+            to
+            it!
+        </p>
+
+        <a href="https://open.spotify.com/album/2F9SCxkzsUQMU5Iw2aM2Qt" target="_blank">
+            <button style="border-color: chartreuse;" onclick="playClick()">
+                <i class="bi bi-spotify svgbutton"></i>
+                listen on spotify
+            </button>
+        </a>
+
+        <a href="https://music.apple.com/us/album/i-felt-like-a-sketch/1807326635" target="_blank">
+            <button style="border-color: red;" onclick="playClick()">
+                <i class="bi bi-apple svgbutton"></i>
+                listen on apple music
+            </button>
+        </a>
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    var music = new Audio('clicksoundeffect.mp3');
+    music.preload = 'auto';
+
+    function playClick() {
+        music.currentTime = 0;
+        music.play();
+    }
+
+    function alertBrowser() {
+        alert("@hexelont");
+    }
+</script>
