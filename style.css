@@ -1,5 +1,5 @@
 :root {
-    --backgroundSize: 150px;
+    --backgroundSize: 125px;
 }
 
 body {
@@ -158,5 +158,11 @@ img {
 @media (max-width: 850px) {
     .logo {
         flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        width: 100%
     }
 }
