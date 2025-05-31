@@ -10,6 +10,7 @@ body {
     background-image: url("background-repeating.png");
     background-size: var(--backgroundSize);
     animation: movingBackground 6s linear infinite;
+    background-attachment: fixed;
 }
 
 @keyframes movingBackground {
