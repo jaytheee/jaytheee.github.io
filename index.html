@@ -18,8 +18,8 @@
 <body>
 
     <div class="actuallycollumn" style="color: #FAE1DF;">
-        <div class="column" style="margin-bottom: 15px; gap: 25px;">
-            <h1>jayden's hut</h1>
+        <div class="column logo" style="margin-bottom: 15px; gap: 25px;">
+            <h1 class="logo-header">jayden's hut</h1>
             <i class="bi bi-house-door-fill" style="font-size: 32px;"></i>
         </div>
 
@@ -33,6 +33,9 @@
             <a href="mailto:heyjaythe@gmail.com" target="_blank" onclick="playClick()" class="social-media-icon">
                 <i class="bi bi-envelope"></i>
             </a>
+            <a onclick="soundToggle()" class="social-media-icon">
+                <i id="soundToggler" class="bi bi-volume-up-fill"></i>
+            </a>
         </div>
     </div>
 
@@ -44,7 +47,7 @@
             <h2>about me</h2>
             <p>hi there!
                 <br> <br> im <span class="accent">jayden</span> (or jaythe) and i enjoy doing a variety of things such
-                as guitar, music production, singing, coding, video editing, occasional gaming and studying!
+                as guitar, music production, coding, video editing, occasional gaming and studying!
                 <br> <br> i’m mainly experienced in web development. if you’d like to see some projects i made in the
                 past, check it out here.
             </p>
@@ -67,8 +70,8 @@
             way.
         </p>
         <div class="link-text actuallycollumn" style="margin-bottom: 0;">
-            <a href="https://kinkylizard.com.au" target="_blank">kinky lizard - 2024 (former)</a>
-            <a href="https://sugarland.id" target="_blank">sugarland homemade bakery - 2024</a>
+            <a onclick="playClick()" href="https://kinkylizard.com.au" target="_blank">kinky lizard - 2024 (former)</a>
+            <a onclick="playClick()" href="https://sugarland.id" target="_blank">sugarland homemade bakery - 2024</a>
         </div>
     </div>
 
@@ -116,12 +119,41 @@
     var music = new Audio('clicksoundeffect.mp3');
     music.preload = 'auto';
 
+    function loadSoundState() {
+        const soundState = localStorage.getItem('soundEnabled');
+        if (soundState === 'false') {
+            soundToggler.classList.remove("bi-volume-up-fill");
+            soundToggler.classList.add("bi-volume-mute-fill");
+        } else {
+            soundToggler.classList.remove("bi-volume-mute-fill");
+            soundToggler.classList.add("bi-volume-up-fill");
+        }
+    }
+
+    function soundToggle() {
+        if (soundToggler.classList.contains("bi-volume-up-fill")) {
+            soundToggler.classList.remove("bi-volume-up-fill");
+            soundToggler.classList.add("bi-volume-mute-fill");
+            localStorage.setItem('soundEnabled', 'false');
+        } else {
+            soundToggler.classList.remove("bi-volume-mute-fill");
+            soundToggler.classList.add("bi-volume-up-fill");
+            localStorage.setItem('soundEnabled', 'true');
+        }
+
+        playClick();
+    }
+
     function playClick() {
-        music.currentTime = 0;
-        music.play();
+        if (soundToggler.classList.contains("bi-volume-up-fill")) {
+            music.currentTime = 0;
+            music.play();
+        }
     }
 
     function alertBrowser() {
         alert("@hexelont");
     }
+
+    document.addEventListener('DOMContentLoaded', loadSoundState);
 </script>

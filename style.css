@@ -1,8 +1,25 @@
+:root {
+    --backgroundSize: 150px;
+}
+
 body {
     background-color: #22272F;
     margin: 5rem auto 5rem auto;
     width: 75%;
     max-width: 750px;
+    background-image: url("background-repeating.png");
+    background-size: var(--backgroundSize);
+    animation: movingBackground 6s linear infinite;
+}
+
+@keyframes movingBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: var(--backgroundSize) var(--backgroundSize);
+    }
 }
 
 h1,
@@ -37,7 +54,8 @@ h3 {
     font-size: 25px;
 }
 
-p, .link-text {
+p,
+.link-text {
     font-size: 20px;
 }
 
@@ -61,19 +79,18 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05)!important;
+    transform: scale(1.05) !important;
 }
 
 
-.accent
-{
+.accent {
 
- color: #E4C3AD;
+    color: #E4C3AD;
 }
 
 .social-media-icon {
-    color: #FAE1DF!important;
-        transition: transform 0.2s ease;
+    color: #FAE1DF !important;
+    transition: transform 0.2s ease;
     cursor: pointer;
 }
 
@@ -117,7 +134,19 @@ img {
     margin: 10px auto 75px auto;
     margin-bottom: 50px;
     width: 75%;
+    animation: popIn 1s ease;
+}
 
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .social-media-row {
@@ -126,4 +155,8 @@ img {
     gap: 15px;
 }
 
-
+@media (max-width: 850px) {
+    .logo {
+        flex-direction: column-reverse;
+    }
+}
