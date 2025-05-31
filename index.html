@@ -5,7 +5,7 @@
     <title>jayden's hut</title>
     <link rel="icon" href="f05.png">
 
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +22,18 @@
     <div class="actuallycollumn" style="color: #FAE1DF;">
         <div class="column logo" style="margin-bottom: 15px; gap: 25px;">
             <h1 class="logo-header">jayden's hut</h1>
-            <i class="bi bi-house-door-fill" style="font-size: 32px;"></i>
+            <a onclick="playClick(); playMusic()" class="social-media-icon">
+                <i class="bi bi-house-door-fill" style="font-size: 32px;"></i></a>
+
         </div>
 
         <div style="color: white;" class="social-media-row" id="click">
             <!-- <a href="https://google.com" target="_blank" onclick="playClick()" class="social-media-icon" >
                 <i class="bi bi-instagram"></i>
             </a> -->
+            <a href="https://www.youtube.com/@hexelont" target="_blank" onclick="playClick()" class="social-media-icon">
+                <i class="bi bi-youtube"></i>
+            </a>
             <a target="_blank" onclick="playClick(); alertBrowser()" class="social-media-icon">
                 <i class="bi bi-discord"></i>
             </a>
@@ -108,7 +113,15 @@
         </a>
     </div>
 
-
+    <!-- <div class="actuallycollumn">
+        <h2>tools i use</h2>
+        <h3>music production</h3>
+        <p>- fl studio
+            <br>
+            - scarlett solo gen 4
+            <br>
+            - studio monitors
+    </div> -->
 
 
 </body>
@@ -116,7 +129,10 @@
 </html>
 
 <script>
-    var music = new Audio('clicksoundeffect.mp3');
+    var click = new Audio('clicksoundeffect.mp3');
+    click.preload = 'auto';
+
+    var music = new Audio('hello.wav');
     music.preload = 'auto';
 
     function loadSoundState() {
@@ -135,6 +151,7 @@
             soundToggler.classList.remove("bi-volume-up-fill");
             soundToggler.classList.add("bi-volume-mute-fill");
             localStorage.setItem('soundEnabled', 'false');
+            music.pause();
         } else {
             soundToggler.classList.remove("bi-volume-mute-fill");
             soundToggler.classList.add("bi-volume-up-fill");
@@ -146,8 +163,21 @@
 
     function playClick() {
         if (soundToggler.classList.contains("bi-volume-up-fill")) {
-            music.currentTime = 0;
-            music.play();
+            click.currentTime = 0;
+            click.play();
+        }
+    }
+
+    function playMusic() {
+        if (soundToggler.classList.contains("bi-volume-up-fill")) {
+            if (music.paused) {
+                music.loop = true;
+                music.play();
+            } else {
+                music.pause();
+            }
+
+
         }
     }
 
