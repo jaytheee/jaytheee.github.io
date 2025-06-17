@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- i didnt use much ai btw. most coding was done by me (yay!) -->
 <head>
     <title>jayden's hut</title>
     <link rel="icon" href="f05.png">
@@ -44,9 +44,21 @@
                 <i id="soundToggler" class="bi bi-volume-up-fill"></i>
             </a>
         </div>
+
+        <div class="column">
+            <a class="navigation" onclick="changeSection('about-me'); playClick()">
+                <p>about me</p>
+            </a>
+            <a class="navigation" onclick="changeSection('projects'); playClick()">
+                <p>projects of mine</p>
+            </a>
+                        <a class="navigation" onclick="changeSection('showcase'); playClick()">
+                <p>favourite showcase</p>
+            </a>
+        </div>
     </div>
 
-    <div class="actuallycollumn">
+    <div class="actuallycollumn" id="about-me">
         <div>
             <img class="image1" src="f05.png">
         </div>
@@ -58,13 +70,13 @@
                 <br> <br> i’m mainly experienced in web development. if you’d like to see some projects i made in the
                 past, check it out here.
             </p>
-            <a href="#projects">
-                <button onclick="playClick()">cool!</button>
+            <a>
+                <button onclick="playClick(); changeSection('projects')">cool!</button>
             </a>
         </div>
     </div>
 
-    <div class="actuallycollumn" id="projects">
+    <div class="actuallycollumn hidden" id="projects">
         <h2>
             projects of mine
         </h2>
@@ -72,19 +84,18 @@
             i've worked on some projects in the past and thought it would be cool to put them on here if anyone's
             interested.
             <br>
-            while these websites may seem a lot more impressive than the page you are currently on, that's because i had
+            while these website(s) may seem a lot more impressive than the page you are currently on, that's because i had
             access to website builders. with this one, i thought it would be a nice challenge to try code it the hard
             way.
         </p>
         <div class="link-text actuallycollumn" style="margin-bottom: 0;">
-            <a onclick="playClick()" href="https://kinkylizard.com.au" target="_blank">kinky lizard - 2024 (former)</a>
             <a onclick="playClick()" href="https://sugarland.id" target="_blank">sugarland homemade bakery - 2024</a>
         </div>
     </div>
 
-    <div class="actuallycollumn">
-        <h2>favourite album <br>
-            (of 2025)</h2>
+    <div class="actuallycollumn hidden" id="showcase">
+        <h2>favourite album
+            (2025)</h2>
         <img class="image1" src="i felt like a sketch.jpg" style="margin-top: 10px;" alt="i felt like a sketch">
         <h3 style="margin-bottom: 10px;">i felt like a sketch</h3>
         <p style="margin-top: 0;">by key vs. locket</p>
@@ -186,4 +197,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadSoundState);
+
+    function changeSection(id) {
+        document.getElementById('about-me').classList.add('hidden');
+        document.getElementById('projects').classList.add('hidden');
+        document.getElementById('showcase').classList.add('hidden');
+        document.getElementById(id).classList.remove('hidden');
+    }
 </script>

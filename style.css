@@ -123,6 +123,7 @@ img {
     margin-bottom: 50px;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .actuallycollumn {
@@ -132,8 +133,8 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 10px auto 75px auto;
-    margin-bottom: 50px;
+    margin: 0px auto 75px auto;
+    margin-bottom: 10px;
     width: 75%;
     animation: popIn 1s ease;
 }
@@ -164,4 +165,9 @@ img {
     body {
         width: 100%;
     }
+}
+
+.hidden {
+    visibility: hidden;
+    display:none;
 }
