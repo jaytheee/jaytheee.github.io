@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- i didnt use much ai btw. most coding was done by me (yay!) -->
+
 <head>
     <title>jayden's hut</title>
     <link rel="icon" href="f05.png">
@@ -18,8 +18,7 @@
 </head>
 
 <body>
-
-    <div class="actuallycollumn" style="color: #FAE1DF;">
+    <div class="actuallycollumn animation" style="color: #FAE1DF;">
         <div class="column logo" style="margin-bottom: 15px; gap: 25px;">
             <h1 class="logo-header">jayden's hut</h1>
             <a onclick="playClick(); playMusic()" class="social-media-icon">
@@ -52,13 +51,16 @@
             <a class="navigation" onclick="changeSection('projects'); playClick()">
                 <p>projects of mine</p>
             </a>
-                        <a class="navigation" onclick="changeSection('showcase'); playClick()">
+            <a class="navigation" onclick="changeSection('showcase'); playClick()">
                 <p>favourite showcase</p>
+            </a>
+            <a class="navigation" onclick="changeSection('tools'); playClick()">
+                <p>tools i use</p>
             </a>
         </div>
     </div>
 
-    <div class="actuallycollumn" id="about-me">
+    <div class="actuallycollumn animation" id="about-me">
         <div>
             <img class="image1" src="f05.png">
         </div>
@@ -76,24 +78,48 @@
         </div>
     </div>
 
-    <div class="actuallycollumn hidden" id="projects">
+    <div class="actuallycollumn animation hidden" id="projects">
         <h2>
-            projects of mine
+            websites
         </h2>
         <p>
             i've worked on some projects in the past and thought it would be cool to put them on here if anyone's
             interested.
             <br>
-            while these website(s) may seem a lot more impressive than the page you are currently on, that's because i had
+            while these website(s) may seem a lot more impressive than the page you are currently on, that's because i
+            had
             access to website builders. with this one, i thought it would be a nice challenge to try code it the hard
             way.
         </p>
-        <div class="link-text actuallycollumn" style="margin-bottom: 0;">
-            <a onclick="playClick()" href="https://sugarland.id" target="_blank">sugarland homemade bakery - 2024</a>
+        <div class="link-text actuallycollumn" style="margin-bottom: 0; gap:25px; margin-top: 10px;">
+            <div class="no animactuallycollumn">
+                <img src="projects/Screenshot 2025-06-20 at 4.35.19 pm.png" class="projectImage">
+                <a onclick="playClick()" href="https://sugarland.id" target="_blank">sugarland homemade bakery -
+                    2024</a>
+            </div>
         </div>
+
+        <h2>games</h2>
+        <div class="link-text actuallycollumn" style="margin-bottom: 0; gap:25px; margin-top: 10px;">
+            <div class="noanim actuallycollumn">
+
+                <img src="projects/Screenshot 2025-06-20 at 4.46.45 pm.png" class="projectImage">
+                <a onclick="playClick()" href="https://hexelont.itch.io/the-two-faced-corporation" target="_blank">the
+                    two faced corporation - 2022</a>
+
+                    
+            </div>
+
+            <div class="noanim actuallycollumn">
+                            <img src="projects/Screenshot 2025-06-20 at 4.47.38 pm.png" class="projectImage">
+            <a onclick="playClick()" href="https://hexelont.itch.io/stride-2d" target="_blank">stride 2d - 2021</a>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="actuallycollumn hidden" id="showcase">
+    <div class="actuallycollumn animation hidden" id="showcase">
         <h2>favourite album
             (2025)</h2>
         <img class="image1" src="i felt like a sketch.jpg" style="margin-top: 10px;" alt="i felt like a sketch">
@@ -122,6 +148,33 @@
                 listen on apple music
             </button>
         </a>
+        <div style="margin-top: 25px;"></div>
+                <h2>more albums i love!</h2>
+                        <img class="image1" src="i didnt mean to haunt you.jpeg" style="margin-top: 10px;" alt="i felt like a sketch">
+        <h3 style="margin-bottom: 10px;">i didn't mean to haunt you</h3>
+        <p style="margin-top: 0;">by quadeca</p>
+        <p style="margin-top: 0;">
+            one of the most mesmerizing pieces of art from an unexpected artist. 
+            
+            i didn't mean to haunt you introduced me to another side of music which i never really explored: story. 
+
+            althought its simple, being a ghost who died from suicide that starts to ponder on many things such as family and life, the execution of the idea is amazing and i abosolutely adore it.
+        </p>
+
+        <a href="https://open.spotify.com/album/3c0NHNo2Gn0X7uARad3hGv" target="_blank">
+            <button style="border-color: chartreuse;" onclick="playClick()">
+                <i class="bi bi-spotify svgbutton"></i>
+                listen on spotify
+            </button>
+        </a>
+
+        <a href="https://music.apple.com/au/album/i-didnt-mean-to-haunt-you/1652831428" target="_blank">
+            <button style="border-color: red;" onclick="playClick()">
+                <i class="bi bi-apple svgbutton"></i>
+                listen on apple music
+            </button>
+        </a>
+
     </div>
 
     <!-- <div class="actuallycollumn">
@@ -134,6 +187,71 @@
             - studio monitors
     </div> -->
 
+        <div class="actuallycollumn animation hidden" id="tools">
+        <h2>tools i use</h2>
+        
+        <div class="tool-category">
+            <h3><i class="bi bi-music-note-beamed"></i> music production</h3>
+            <p>
+                • <span class="accent">fl studio</span> - my main daw for creating beats and producing music
+                <br>
+                • <span class="accent">scarlett solo gen 4</span> - audio interface for recording guitar and playing sound w/ studio monitors
+                <br>
+                • <span class="accent">studio monitors</span> - for personal use / listening to songs
+                <br>
+                • <span class="accent">guitar</span> - what else?
+            </p>
+        </div>
+
+        <div class="tool-category">
+            <h3><i class="bi bi-code-slash"></i> coding & development</h3>
+            <p>
+                • <span class="accent">visual studio code</span> - my go-to code editor (because it's free)
+                <br>
+                • <span class="accent">wordpress</span> - for actual web development
+                <br>
+                                • <span class="accent">elementor builder</span> - for wordpress websites
+                <br>
+            </p>
+        </div>
+
+        <div class="tool-category">
+            <h3><i class="bi bi-camera-video"></i> video editing / photo editing</h3>
+            <p>
+                • <span class="accent">davinci resolve</span> - really powerful and free!
+                <br>
+                • <span class="accent">osmo pocket 3</span> - amazing camera i was going to use for my vlogs
+                <br>
+                • <span class="accent">photoshop</span> - thumbnails
+            </p>
+        </div>
+
+        <div class="tool-category">
+            <h3><i class="bi bi-joystick"></i> game development</h3>
+            <p>
+                • <span class="accent">unity</span> - game engine for 2d and 3d games
+                <br>
+                • <span class="accent">c#</span> - programming language for unity scripts
+                <br>
+                • <span class="accent">itch.io</span> - platform for publishing indie games
+                <br>
+                • <span class="accent">aseprite</span> - pixel art and sprite animation
+            </p>
+        </div>
+
+        <div class="tool-category">
+            <h3><i class="bi bi-laptop"></i> general setup</h3>
+            <p>
+                • <span class="accent">macbook</span> - my main work machine
+                <br>
+                                • <span class="accent">ipad</span> - for doodling and note-taking
+                <br>
+                                                • <span class="accent">google pixel 9</span> - a phone...
+                <br>
+                • <span class="accent">apple music</span> - best music streaming platform
+            </p>
+        </div>
+    </div>
 
 </body>
 
@@ -143,7 +261,7 @@
     var click = new Audio('clicksoundeffect.mp3');
     click.preload = 'auto';
 
-    var music = new Audio('hello.wav');
+    var music = new Audio('hello2.wav');
     music.preload = 'auto';
 
     function loadSoundState() {
@@ -202,6 +320,9 @@
         document.getElementById('about-me').classList.add('hidden');
         document.getElementById('projects').classList.add('hidden');
         document.getElementById('showcase').classList.add('hidden');
+                document.getElementById('tools').classList.add('hidden');
         document.getElementById(id).classList.remove('hidden');
     }
+
+    
 </script>
